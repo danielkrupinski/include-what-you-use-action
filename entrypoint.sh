@@ -47,7 +47,7 @@ if [ ! -f "$ORIGINALDIR/$COMPILATIONDB/compile_commands.json" ]; then
 fi
 
 cd "$ORIGINALDIR"
-python /usr/local/bin/iwyu_tool.py -o "$FORMAT" -p "$COMPILATIONDB" \
+python3 /usr/local/bin/iwyu_tool.py -o "$FORMAT" -p "$COMPILATIONDB" \
     | sed "$PATTERN"                                                \
     | cat -s                                                        \
     | tee "$LOGFILE"
