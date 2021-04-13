@@ -2,7 +2,7 @@ FROM alpine:3.13
 
 RUN apk update                                                                                          && \
     apk upgrade                                                                                         && \
-    apk add llvm10-dev llvm10-static clang-dev clang-static g++ git cmake ninja musl-dev python coreutils && \
+    apk add llvm10-dev llvm10-static clang-dev clang-static g++ git cmake ninja musl-dev python3 coreutils && \
     git clone -b clang_10 --single-branch https://github.com/include-what-you-use/include-what-you-use.git        && \
     mkdir iwyu                                                                                          && \
     cd iwyu                                                                                             && \
